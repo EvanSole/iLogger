@@ -5,14 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.vip.logger.service.SceLoggerServiceTest;
+import com.vip.logger.service.SceLoggerService;
 
 @Controller
 @RequestMapping(value = "/logger")
 public class SceLoggerController {
 
 	@Autowired
-	private SceLoggerServiceTest sceLoggerService;
+	private SceLoggerService sceLoggerService;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultView() {

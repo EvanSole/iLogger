@@ -46,6 +46,12 @@
 			<version>2.3</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.12</version>
+		</dependency>
+
 		<!-- json -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
@@ -62,7 +68,6 @@
 			<artifactId>org.json</artifactId>
 			<version>chargebee-1.0</version>
 		</dependency>
-
 
 		<!-- Spring begin -->
 		<dependency>
