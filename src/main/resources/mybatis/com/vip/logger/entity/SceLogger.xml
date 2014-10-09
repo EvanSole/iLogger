@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.vip.logger.dao.SceLoggerDao">
+    <resultMap type="com.vip.logger.entity.SceLogger" id="sceLoggerMap">
+		<id property="id" column="id"/>
+		<result property="classPathName" column="classPathName"/>
+		<result property="level" column="level"/>
+		<result property="isEnable" column="isEnable"/>
+    </resultMap>
+    
+    <sql id="column_sql">id,classPathName,level,isEnable</sql>
+    
+    <select id="findAllSceLoggers" resultMap="sceLoggerMap">
+        SELECT <include refid="column_sql"/> FROM sys_sce_logger 
+	</select>
+	
+	<select id="findSceLoggerList" resultMap="sceLoggerMap" parameterType="java.lang.Long">
+        SELECT <include refid="column_sql"/> FROM sys_sce_logger where id = #{id}
+	</select>
+
+	
+</mapper>
